@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import Card from "./Card";
+import ShowCard from './ShowCard';
 
 const Carousel = () => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -36,7 +36,7 @@ const Carousel = () => {
                 <div className="flex-shrink-0 w-[calc(50vw-636px)]" />
 
                 <div className="flex-shrink-0" style={{ scrollSnapAlign: 'center' }}>
-                    <Card
+                    <ShowCard
                         showName="Trisha Paytas"
                         location="St. James Theater"
                         dateStart={new Date('2025-02-04')}
@@ -46,7 +46,7 @@ const Carousel = () => {
                     />
                 </div>
                 <div className="flex-shrink-0" style={{ scrollSnapAlign: 'center' }}>
-                    <Card
+                    <ShowCard
                         showName="Out of Order"
                         location="East Village Basement"
                         dateStart={new Date('2025-06-27')}
@@ -62,7 +62,7 @@ If he fails to compete every challenge, he'll quit theatre forever. We're not jo
                     />
                 </div>
                 <div className="flex-shrink-0" style={{ scrollSnapAlign: 'center' }}>
-                    <Card
+                    <ShowCard
                         showName="Trisha Paytas"
                         location="St. James Theater"
                         dateStart={new Date('2025-06-27')}

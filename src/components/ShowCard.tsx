@@ -13,7 +13,7 @@ interface CardProps {
     description?: string;
 }
 
-const Card = ({ showName, location, dateStart, dateEnd, isActive = false, ticketUrl, backgroundImageUrl, description = "description" }: CardProps) => {
+const ShowCard = ({ showName, location, dateStart, dateEnd, isActive = false, ticketUrl, backgroundImageUrl, description = "description" }: CardProps) => {
 
     const formatDateRange = (start?: Date, end?: Date) => {
         if (!start) return "";
@@ -97,4 +97,4 @@ const Card = ({ showName, location, dateStart, dateEnd, isActive = false, ticket
     );
 };
 
-export default Card;
+export default ShowCard;
