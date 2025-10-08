@@ -3,23 +3,25 @@
 import React from 'react';
 
 interface ButtonProps {
-  text: string;
+  children: React.ReactNode;
   onClick?: () => void;
   href?: string;
   variant?: 'primary' | 'outlined' | 'disabled';
   size?: 'small' | 'normal' | 'large';
   className?: string;
   disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 const Button = ({ 
-  text, 
+  children, 
   onClick, 
   href, 
   variant = 'primary', 
   size = 'normal', 
   className = '',
-  disabled = false 
+  disabled = false,
+  type 
 }: ButtonProps) => {
   
   const sizeClasses = {
@@ -31,7 +33,7 @@ const Button = ({
   const Component = href && !disabled ? 'a' : 'button';
   const props: any = href && !disabled 
     ? { href, target: '_blank', rel: 'noopener noreferrer' }
-    : { onClick, disabled };
+    : { onClick, disabled, type: type || 'button'};
 
   if (disabled || variant === 'disabled') {
     return (
@@ -40,7 +42,7 @@ const Button = ({
         disabled={true}
         style={{ fontFamily: 'aptly, sans-serif' }}
       >
-        {text}
+        {children}
       </button>
     );
   }
@@ -51,7 +53,7 @@ const Button = ({
       className={`relative inline-block group ${className}`}
     >
       {/* Invisible container for sizing */}
-      <span className={`invisible font-bold ${sizeClasses[size]} block`}>{text}</span>
+      <span className={`invisible font-bold ${sizeClasses[size]} block`}>{children}</span>
       
       {/* Dark blue background layer (visible on hover) */}
       <span 
@@ -78,7 +80,7 @@ const Button = ({
             --button-shadow: 0 0 0 2px #FBF7F4 !important;
           }
         `}</style>
-        {text}
+        {children}
       </span>
     </Component>
   );
