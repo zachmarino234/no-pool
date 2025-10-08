@@ -14,9 +14,9 @@ const Footer = () => {
                 alt="No Pool Productions"
             />
             <div className="flex justify-center items-end gap-5">
-                <SocialIcon url="https://www.instagram.com/nopoolproductions/" />
-                <SocialIcon url="https://tiktok.com" hidden/>
-                <SocialIcon url="https://www.linkedin.com/company/no-pool-prods/" />
+                <SocialIcon url="https://www.instagram.com/nopoolproductions/" target="_blank" />
+                <SocialIcon url="https://tiktok.com" target="_blank" hidden/>
+                <SocialIcon url="https://www.linkedin.com/company/no-pool-prods/" target="_blank" />
             </div>
             <div className="flex flex-col items-start gap-5">
                 <div className="flex justify-between items-start self-stretch pt-2.5">
