@@ -34,11 +34,7 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 21px; /* 131.25% */
-}
-
-@media (min-width: 640px) {
-
+  line-height: 21px;
 }
 
 /* desktop/h1 */
@@ -55,6 +51,19 @@ h1 {
   line-height: normal;
 }
 
+/* desktop/h2 */
+h2 {
+  color: var(--brand-primary, #0396FF);
+  text-shadow: 1.8px 1.4px 0 #013FFD;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: var(--neutral-white, #FBF7F4);
+  font-family: Aptly;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 h6 {
   color: var(--neutral-white, #FBF7F4);
   font-family: Helvetica;
@@ -64,18 +73,18 @@ h6 {
   line-height: normal;
 }
 
-a {
-  transition: all 1s ease-in;
-}
-
 a:hover {
   text-decoration: underline;
 }
 
 .scrollbar-hide {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
+
 .scrollbar-hide::-webkit-scrollbar {
-    display: none; /* Chrome, Safari and Opera */
+  display: none;
+  /* Chrome, Safari and Opera */
 }
