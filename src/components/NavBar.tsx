@@ -5,6 +5,7 @@ import logo from "../../public/logo.svg"
 import Link from "next/link";
 import Image from "next/image";
 import NavButton from "./NavButton";
+import { useContact } from '@/contexts/ContactContext';
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,8 +20,10 @@ const NavBar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const { openContact } = useContact();
+
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center bg-neutral-white shadow-md transition-all duration-300 ${isScrolled ? 'h-16 py-1.5 pl-3 pr-8' : 'h-24 py-2.5 pl-5 pr-10'
+    <header className={`3xl:px-50 fixed top-0 left-0 right-0 z-50 flex justify-between items-center bg-neutral-white shadow-md transition-all duration-300 ${isScrolled ? 'h-16 py-1.5 pl-3 pr-8' : 'h-24 py-2.5 pl-5 pr-10'
       }`}>
       <Link href="/">
         <Image
@@ -48,10 +51,8 @@ const NavBar = () => {
               <NavButton text="Team" size={isScrolled ? 'small' : 'normal'} />
             </Link>
           </li>
-          <li>
-            <Link href="/contact">
-              <NavButton text="Contact" size={isScrolled ? 'small' : 'normal'} />
-            </Link>
+          <li onClick={openContact}>
+            <NavButton text="Contact" size={isScrolled ? 'small' : 'normal'} />
           </li>
         </ul>
       </nav>

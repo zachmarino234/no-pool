@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import NavBear from "@/components/NavBear";
+import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import { ContactProvider } from "@/contexts/ContactContext";
+import ContactOverlay from "@/components/ContactOverlay";
+import ContactOverlayWrapper from "@/contexts/ContactOverlayWrapper";
 
 export const metadata: Metadata = {
   title: "No Pool Productions",
@@ -19,9 +22,12 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://use.typekit.net/dbw5tsh.css" />
       </head>
       <body>
-        <NavBear />
-        {children}
-        <Footer />
+        <ContactProvider>
+          <NavBar />
+          {children}
+          <Footer />
+          <ContactOverlayWrapper />
+        </ContactProvider>
       </body>
     </html>
   );
