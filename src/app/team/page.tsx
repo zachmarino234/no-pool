@@ -8,7 +8,7 @@ import Zach from "../../../public/zach.png";
 
 export default function Team() {
   return (
-    <main className="mt-24">
+    <main className="mt-24 3xl:px-64 2xl:px-50">
       <TeamBio name="Kobi Kassal" title="Managing Partner" imageURL={Kobi} linkedinURL="https://www.linkedin.com/in/kobi-kassal-0b5815109/" email="mailto:kkassal@gmail.com">
         Kobi is a producer, marketer, and media entrepreneur.  He founded Theatrely, a digital media platform aimed at Gen Z during his time at Boston University, and over the past few years it quickly grew into one of the most prominent Broadway outlets in the industry. In 2023, the company was acquired by Hollywood.com and Nederlander Worldwide Entertainment.
 
@@ -34,7 +34,7 @@ export default function Team() {
 
         Bagel Order:
       </TeamBio>
-      <TeamBio name="Zach Marino" title="Design Consultant" imageURL={Zach} linkedinURL="https://www.linkedin.com/in/zach-marino/" email="mailto:hello@zmarino.com">
+      <TeamBio name="Zach Marino" title="Design Consultant" imageURL={Zach} linkedinURL="https://www.linkedin.com/in/zach-marino/" email="mailto:hello@zmarino.com" portfolio="https://www.zmarino.com">
         Emily Wyrwa is originally (and proudly) from New Jersey and studies at Boston University College of Communication. She previously worked for the Boston Globe where she interviewed Ethan Slater about miming rather than "Wicked." She's a pizza snob, loves classic rock, and spends most of her spare time with her camera in hand exploring new neighborhoods. She can be spotted via the "Shucked" keychain on her bag!
 
         Bagel Order:
