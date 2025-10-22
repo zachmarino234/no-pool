@@ -2,7 +2,7 @@ const NavButton = ({ text = "Text", size = "normal" }) => {
     const textSize = size === 'small' ? 'text-2xl' : 'text-3xl';
     
     return (
-        <button className='relative inline-block group'>
+        <button className='relative inline-block group cursor-pointer'>
             {/* Container to maintain size - should match visible text size */}
             <span className={`invisible font-bold ${textSize} px-2`}>{text}</span>
             
