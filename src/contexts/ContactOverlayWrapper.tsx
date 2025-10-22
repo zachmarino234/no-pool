@@ -1,6 +1,6 @@
 'use client';
 
-import ContactOverlay from '../components/ContactOverlay';
+import ContactOverlay from '../components/layouts/ContactOverlay';
 import { useContact } from '@/contexts/ContactContext';
 
 export default function ContactOverlayWrapper() {

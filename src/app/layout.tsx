@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
+import NavBar from "@/components/layouts/NavBar";
+import Footer from "@/components/layouts/Footer";
 import { ContactProvider } from "@/contexts/ContactContext";
-import ContactOverlay from "@/components/ContactOverlay";
+import ContactOverlay from "@/components/layouts/ContactOverlay";
 import ContactOverlayWrapper from "@/contexts/ContactOverlayWrapper";
 
 export const metadata: Metadata = {

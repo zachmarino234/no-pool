@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react';
 import Image from "next/image";
 import { Pause, Play } from 'lucide-react';
-import BlueWordmark from "./BlueWordmark";
-import OutOfOrder from "../../public/outoforder.jpg";
-import TrishaPhone from "../../public/trishaphone.jpg";
+import BlueWordmark from "../home/BlueWordmark";
+import OutOfOrder from "../../../public/outoforder.jpg";
+import TrishaPhone from "../../../public/trishaphone.jpg";
 
 const Hero = () => {
 

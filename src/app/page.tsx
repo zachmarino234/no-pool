@@ -1,9 +1,9 @@
 
 import Image from "next/image";
-import WaveSection from "@/components/WaveSection";
+import WaveSection from "@/components/layouts/WaveSection";
 import npp_team from "../../public/npp_team.png"
-import Hero from "@/components/Hero";
-import ProjectGrid from "@/components/ProjectGrid";
+import Hero from "@/components/layouts/Hero";
+import ProjectGrid from "@/components/home/ProjectGrid";
 
 export default function Home() {
   return (

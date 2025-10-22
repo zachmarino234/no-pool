@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from "../../public/logo.svg"
+import logo from "../../../public/logo.svg"
 import Link from "next/link";
 import Image from "next/image";
-import NavButton from "./NavButton";
+import NavButton from "../ui/NavButton";
 import { useContact } from '@/contexts/ContactContext';
 
 const NavBar = () => {

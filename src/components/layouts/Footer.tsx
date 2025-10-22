@@ -1,5 +1,5 @@
 import Image from "next/image";
-import wordmark from "../../public/wordmark_white.svg"
+import wordmark from "../../../public/wordmark_white.svg"
 import { SocialIcon } from "react-social-icons";
 import Link from "next/link";
 

@@ -1,4 +1,4 @@
-import TeamBio from "@/components/TeamBio";
+import TeamBio from "@/components/team/TeamBio";
 import Kobi from "../../../public/kobi.png";
 import Alex from "../../../public/alex.png";
 import Andrew from "../../../public/andrew.png";
