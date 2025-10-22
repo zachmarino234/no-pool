@@ -56,8 +56,8 @@ const ContactOverlay = ({ isOpen, onClose }: ContactOverlayProps) => {
             {/* Modal */}
             <div className="fixed inset-0 z-[101] flex items-center justify-center p-4 pointer-events-none">
                 <div className="bg-white rounded-2xl p-8 max-w-md w-full pointer-events-auto relative border-brand-primary border-2">
-                    <button onClick={onClose} className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-lg transition-colors" aria-label="Close">
-                        <X className="w-6 h-6" />
+                    <button onClick={onClose} className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer" aria-label="Close">
+                        <X className="w-6 h-6"/>
                     </button>
 
                     <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'aptly, sans-serif' }}>
@@ -71,7 +71,7 @@ const ContactOverlay = ({ isOpen, onClose }: ContactOverlayProps) => {
                         <a href={`mailto:${email}`} className="text-2xl text-[#0396FF] hover:text-[#0277BD] transition-colors font-bold" style={{ fontFamily: 'aptly, sans-serif' }}>
                             {email}
                         </a>
-                        <button onClick={handleCopy} className="p-2 hover:bg-gray-100 rounded-lg transition-all duration-75" aria-label={copied ? "Copied!" : "Copy email address"}>
+                        <button onClick={handleCopy} className="p-2 hover:bg-gray-100 rounded-lg transition-all duration-75 cursor-pointer" aria-label={copied ? "Copied!" : "Copy email address"}>
                             {copied ? (
                                 <Check className="w-6 h-6 text-grey-600" />
                             ) : (
