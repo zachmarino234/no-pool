@@ -63,7 +63,7 @@ const NavBar = () => {
 
         {/* Mobile Hamburger Button */}
         <button
-          className="md:hidden p-2 transition-colors duration-200"
+          className="md:hidden p-2 transition-colors duration-200 cursor-pointer"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -75,36 +75,29 @@ const NavBar = () => {
         </button>
       </header>
 
-      {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
-          onClick={closeMobileMenu}
-        />
-      )}
-
-      {/* Mobile Menu Drawer */}
+      {/* Mobile Menu Full-Screen */}
       <nav
-        className={`fixed top-0 right-0 h-full w-64 bg-neutral-white shadow-lg z-40 transform transition-transform duration-300 ease-in-out md:hidden ${
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed inset-0 bg-neutral-white z-40 flex items-center justify-center transition-opacity duration-300 ease-in-out md:hidden ${
+          isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
+        onClick={closeMobileMenu}
       >
-        <ul className={`flex flex-col gap-6 ${isScrolled ? 'pt-20' : 'pt-24'} px-6`}>
+        <ul className="flex flex-col gap-8 items-start" onClick={(e) => e.stopPropagation()}>
           <li>
             <Link href="/" onClick={closeMobileMenu}>
-              <NavButton text="Home" size="small" />
+              <NavButton text="Home" size="large" />
             </Link>
           </li>
           <li>
             <Link href="/team" onClick={closeMobileMenu}>
-              <NavButton text="Team" size="small" />
+              <NavButton text="Team" size="large" />
             </Link>
           </li>
           <li onClick={() => {
             openContact();
             closeMobileMenu();
           }}>
-            <NavButton text="Contact" size="small" />
+            <NavButton text="Contact" size="large" />
           </li>
         </ul>
       </nav>

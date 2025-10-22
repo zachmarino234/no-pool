@@ -1,5 +1,5 @@
 const NavButton = ({ text = "Text", size = "normal" }) => {
-    const textSize = size === 'small' ? 'text-2xl' : 'text-3xl';
+    const textSize = size === 'small' ? 'text-2xl' : size === 'large' ? 'text-5xl' : 'text-3xl';
     
     return (
         <button className='relative inline-block group cursor-pointer'>
