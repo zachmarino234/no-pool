@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Pause, Play } from 'lucide-react';
 import BlueWordmark from "../home/BlueWordmark";
 import OutOfOrder from "../../../public/outoforder.jpg";
+import OutofOrder2 from "../../../public/outoforder2.png"
 import TrishaPhone from "../../../public/trishaphone.jpg";
 
 const Hero = () => {
@@ -12,7 +13,8 @@ const Hero = () => {
     // Image cycle array
     const images = [
         OutOfOrder,
-        TrishaPhone
+        TrishaPhone,
+        OutofOrder2
         // More images go here...
     ];
 

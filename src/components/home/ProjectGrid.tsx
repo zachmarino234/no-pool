@@ -7,7 +7,7 @@ const ProjectGrid = () => {
       name: "Out of Order",
       date: "June 2025",
       role: "Producer",
-      image: "/outoforder.jpg",
+      image: "/outoforder_logo.png",
       size: "2x2"
     },
     {
@@ -40,7 +40,7 @@ const ProjectGrid = () => {
 
   return (
     <div className="w-full h-full p-4 md:p-6 pb-20 sm:pb-20 md:pb-20 lg:pb-20 lg:p-8 lg:px-32 bg-[#7CCCF8]">
-      <div className="grid gap-3 md:gap-4 lg:gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 auto-rows-fr" style={{ gridAutoFlow: 'dense' }}>
+      <div className="grid gap-3 md:gap-4 lg:gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 auto-rows-fr" style={{ gridAutoFlow: 'dense', gridAutoRows: 'minmax(200px, 1fr)' }}>
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
