@@ -31,6 +31,7 @@ const Button = ({
   };
 
   const Component = href && !disabled ? 'a' : 'button';
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const props: any = href && !disabled 
     ? { href, target: '_blank', rel: 'noopener noreferrer' }
     : { onClick, disabled, type: type || 'button'};
