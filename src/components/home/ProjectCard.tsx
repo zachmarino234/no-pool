@@ -1,7 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const ProjectCard = ({ project }) => {
+interface Project {
+  name: string;
+  date?: string;
+  role?: string;
+  image: string;
+  size?: string;
+  showOverlay?: boolean;
+  link?: string;
+}
+
+const ProjectCard = ({ project }: { project: Project }) => {
   // Define size classes based on project size property
   const getSizeClasses = () => {
     switch(project.size) {
