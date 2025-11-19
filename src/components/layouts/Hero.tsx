@@ -22,6 +22,7 @@ const Hero = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     // useState to track when the image is transitioning
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [isTransitioning, setIsTransitioning] = useState(false);
 
     // useState to track when paused

@@ -1,5 +1,4 @@
 import Image, { StaticImageData } from "next/image";
-import Alex from "../../public/alex.png"
 import { SocialIcon } from "react-social-icons";
 
 interface TeamBioProps {
