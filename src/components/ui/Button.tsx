@@ -73,7 +73,6 @@ const Button = ({
         style={{ 
           fontFamily: 'aptly, sans-serif',
           boxShadow: 'var(--button-shadow)',
-          '--button-shadow': '0 0 0 0 transparent',
         }}
       >
         <style jsx>{`
