@@ -54,7 +54,7 @@
 </defs>
 </svg>
 
-
+No Pool Productions is a Broadway production company that is here to make a splash in the theatrical landscape, committed to developing and fostering unique and thrilling work for a new generation of artists and audiences alike.
 
 ## Getting Started
 
