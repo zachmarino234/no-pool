@@ -33,7 +33,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
         src={project.image}
         alt={project.name}
         fill
-        className="object-cover transition-transform duration-300 group-hover:scale-105"
+        className="object-cover"
         sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 20vw"
       />
 
@@ -59,7 +59,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
     </>
   );
   
-  const containerClasses = `group relative rounded-2xl overflow-hidden cursor-pointer transition-transform hover:scale-[1.02] duration-300 ${getSizeClasses()}`;
+  const containerClasses = `group relative rounded-2xl overflow-hidden ${getSizeClasses()}`;
 
   // If there's a link
   if (project.link) {
