@@ -33,15 +33,14 @@ const Button = ({
   const Component = href && !disabled ? 'a' : 'button';
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const props: any = href && !disabled 
-    ? { href, target: '_blank', rel: 'noopener noreferrer' }
+    ? { href, rel: 'noopener noreferrer' }
     : { onClick, disabled, type: type || 'button'};
 
   if (disabled || variant === 'disabled') {
     return (
       <button 
-        className={`font-bold rounded-xl bg-gray-400 text-white cursor-not-allowed ${sizeClasses[size]} ${className}`}
+        className={`rounded-xl bg-gray-400 text-white cursor-not-allowed ${sizeClasses[size]} ${className}`}
         disabled={true}
-        style={{ fontFamily: 'aptly, sans-serif' }}
       >
         {children}
       </button>
@@ -54,7 +53,7 @@ const Button = ({
       className={`relative inline-block group ${className}`}
     >
       {/* Invisible container for sizing */}
-      <span className={`invisible font-bold ${sizeClasses[size]} block`}>{children}</span>
+      <span className={`invisible ${sizeClasses[size]} block whitespace-nowrap`}>{children}</span>
       
       {/* Dark blue background layer (visible on hover) */}
       <span 
@@ -65,13 +64,13 @@ const Button = ({
       
       {/* Light blue foreground that "lifts" on hover with white stroke */}
       <span 
-        className={`absolute inset-0 rounded-xl font-bold flex items-center justify-center transition-all duration-300 group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 ${sizeClasses[size]} ${
+        className={`absolute inset-0 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 ${sizeClasses[size]} whitespace-nowrap ${
           variant === 'outlined' 
             ? 'bg-transparent text-[#0396FF] border-2 border-[#0396FF] group-hover:bg-[#0396FF] group-hover:text-white' 
-            : 'bg-[#0396FF] text-white'
+            : 'bg-[#0396FF] text-white border-2 border-[#FBF7F4]'
         }`}
         style={{ 
-          fontFamily: 'aptly, sans-serif',
+          fontFamily: 'inherit',
           boxShadow: 'var(--button-shadow)',
         }}
       >
