@@ -29,7 +29,7 @@ const Footer = () => {
                     </div>
                     <div className="flex flex-col items-start gap-2.5">
                         <h6>Company</h6>
-                        <Link href="/brand">Brand</Link>
+                        <Link href="/NPP_logos.zip" download="NPP_logos.zip">Brand Assets</Link>
                         <Link href="/jobs" hidden>Jobs</Link>
                         <Link href="/privacy-policy">Privacy Policy</Link>
                     </div>
