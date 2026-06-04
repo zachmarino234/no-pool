@@ -33,7 +33,7 @@ export default function Home() {
               className="rounded-2xl border-5 border-brand-primary shadow-image sm:w-1/2"
             />
           </div>
-          <h1 className="w-full mt-2.5 flex flex-col pt-8 3xl:px-64">
+          <h1 className="w-full mt-2.5 flex flex-col pt-8 pb-0 3xl:px-64">
             SEE WHAT WE&apos;VE BEEN UP TO...
           </h1>
         </div>
