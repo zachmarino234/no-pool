@@ -5,6 +5,8 @@ import Link from "next/link";
 
 const Footer = () => {
 
+    const currentYear: number = new Date().getFullYear();
+
     return (
         <footer className="flex flex-col lg:flex-row-reverse px-5 lg:px-32 lg:max-3xl:justify-between 3xl:justify-center 3xl:gap-32 py-10 items-center self-stretch gap-5 bg-neutral-black text-neutral-white">
             <Image
@@ -25,7 +27,6 @@ const Footer = () => {
                         <Link href="/">Home</Link>
                         <Link href="/work" hidden>Work</Link>
                         <Link href="/team">Team</Link>
-                        <Link href="/contact">Contact</Link>
                     </div>
                     <div className="flex flex-col items-start gap-2.5">
                         <h6>Company</h6>
@@ -36,7 +37,7 @@ const Footer = () => {
                 </div>
                 <div>
                     Website Designed by <a href="https://zmarino.com" target="_blank" className="font-bold">Zach Marino</a> <br />
-                    Copyright © 2025 No Pool Productions
+                    Copyright © {currentYear} No Pool Productions
                 </div>
             </div>
         </footer>

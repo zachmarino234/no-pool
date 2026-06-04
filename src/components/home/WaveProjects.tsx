@@ -10,7 +10,7 @@ const projects = [
   },
   {
     name: "logo",
-    image: "wordmark_blue.svg",
+    image: "/npp_logomark.png",
     size: "1x1",
     showOverlay: false
   },
@@ -30,7 +30,7 @@ const projects = [
   },
   {
     name: "logo",
-    image: "wordmark_white.svg",
+    image: "/npp_wordmark.png",
     size: "1x1",
     showOverlay: false
   }
@@ -39,6 +39,40 @@ const projects = [
 const WaveProjects = () => {
   return (
     <section className="relative w-full rounded-t-[2.5rem] overflow-hidden">
+      {/* Rippling frame filter (shared by all project cards) */}
+      <svg width="0" height="0" className="absolute" aria-hidden="true">
+        <defs>
+          <filter id="wave-ripple" x="-20%" y="-20%" width="140%" height="140%">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.008 0.012"
+              numOctaves="1"
+              seed="3"
+              result="noise"
+            >
+              <animate
+                attributeName="baseFrequency"
+                dur="8s"
+                repeatCount="indefinite"
+                calcMode="spline"
+                keyTimes="0;0.5;1"
+                keySplines="0.4 0 0.6 1;0.4 0 0.6 1"
+                values="0.008 0.012;0.011 0.009;0.008 0.012"
+              />
+            </feTurbulence>
+            {/* Blur the displacement field so the wave edges stay smooth, not pixelated */}
+            <feGaussianBlur in="noise" stdDeviation="2" result="smoothNoise" />
+            <feDisplacementMap
+              in="SourceGraphic"
+              in2="smoothNoise"
+              scale="12"
+              xChannelSelector="R"
+              yChannelSelector="G"
+            />
+          </filter>
+        </defs>
+      </svg>
+
       {/* Wave header */}
       <div className="relative w-full h-64 bg-transparent overflow-hidden z-10">
         {/* Darkest blue wave layer - bottom (renders first) */}

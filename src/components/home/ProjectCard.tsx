@@ -28,38 +28,44 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
   const content = (
     <>
-      {/* Background Image */}
-      <Image
-        src={project.image}
-        alt={project.name}
-        fill
-        className="object-cover"
-        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 20vw"
-      />
+      {/* Clipped media + content */}
+      <div className="absolute inset-0 rounded-2xl overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src={project.image}
+          alt={project.name}
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 20vw"
+        />
 
-      {/* Gradient Overlay */}
-      {project.showOverlay !== false && (
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-      )}
-      
-      {/* Content */}
-      {project.showOverlay !== false && (
-        <div className="relative h-full flex flex-col justify-end p-4 md:p-5 lg:p-6">
-          <h3 className="text-white font-bold text-lg md:text-xl lg:text-2xl mb-1 line-clamp-2">
-            {project.name}
-          </h3>
-          <p className="text-white/90 text-sm md:text-base font-medium mb-1">
-            {project.role}
-          </p>
-          <p className="text-white/70 text-xs md:text-sm">
-            {project.date}
-          </p>
-        </div>
-      )}
+        {/* Gradient Overlay */}
+        {project.showOverlay !== false && (
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+        )}
+
+        {/* Content */}
+        {project.showOverlay !== false && (
+          <div className="relative h-full flex flex-col justify-end p-4 md:p-5 lg:p-6">
+            <h3 className="text-white font-bold text-lg md:text-xl lg:text-2xl mb-1 line-clamp-2">
+              {project.name}
+            </h3>
+            <p className="text-white/90 text-sm md:text-base font-medium mb-1">
+              {project.role}
+            </p>
+            <p className="text-white/70 text-xs md:text-sm">
+              {project.date}
+            </p>
+          </div>
+        )}
+      </div>
+
+      {/* Rippling wave frame (not clipped, so it can wave over the edges) */}
+      <div className="ripple-frame pointer-events-none absolute -inset-1 z-10 rounded-[1.25rem] border-8 border-[#7CCDF9]" />
     </>
   );
-  
-  const containerClasses = `group relative rounded-2xl overflow-hidden ${getSizeClasses()}`;
+
+  const containerClasses = `group relative rounded-2xl ${getSizeClasses()}`;
 
   // If there's a link
   if (project.link) {
